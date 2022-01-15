@@ -22,6 +22,9 @@ module.exports = {
 
 		],
 		sidebar: {
+			'/vuejs/': [
+				'组件间通信'
+			],
 			'/project/': [
 				'husky',
 			]
