@@ -8,9 +8,11 @@
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "^7.0.4",
     "vuepress": "^1.9.5"
   }
 }
