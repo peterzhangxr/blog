@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "a blog of peterzhang",
+  "main": "index.js",
+  "repository": "git@github.com:peterzhangxr/blog.git",
+  "author": "Peter Zhang <peter.zhang.henan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "vuepress": "^1.9.5"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.10"
+  }
+}
