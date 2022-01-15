@@ -18,4 +18,4 @@ jobs:
           dst_token:  ${{ secrets.GITEE_TOKEN }}
           static_list: "blog"
           force_update: true
-			    debug: true
+          debug: true
