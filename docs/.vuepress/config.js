@@ -1,3 +1,23 @@
+const fs = require('fs')
+const path = require('path')
+const sidebar = {}
+const files = fs.readdirSync(path.resolve(__dirname, '../'))
+files.forEach((dir) => {
+	if (dir !== '.vuepress' && dir != 'README.md') {
+		const tempPath = `/${dir}/`
+		const subFiles = fs.readdirSync(path.resolve(__dirname, '../' + dir))
+		subFiles.forEach((file) => {
+			if (file != 'index.md') {
+				if (!sidebar[tempPath]) {
+					sidebar[tempPath] = []
+				}
+				sidebar[tempPath].push(file.substr(0, file.length - 3))
+			}
+		})
+	} 
+})
+console.log(sidebar)
+
 module.exports = {
 	title: "Peter's Blog",
 	description: "勤读立耕 立己达人",
@@ -12,7 +32,7 @@ module.exports = {
 			{ text: 'Vue', link: '/vuejs/'},
 			{ text: 'React', link: '/react/'},
 			{ text: 'MySQL', link: '/mysql/'},
-			{ text: 'PHP', link: '/php/'},
+			{ text: 'NodeJS', link: '/nodejs/'},
 			{ text: 'Python', link: '/python/'},
 			{ text: 'Android', link: '/android/'},
 			{ text: 'HTTP', link: '/http/'},
@@ -21,13 +41,6 @@ module.exports = {
 			{ text: '工程化', link: '/project/'},
 
 		],
-		sidebar: {
-			'/vuejs/': [
-				'组件间通信'
-			],
-			'/project/': [
-				'husky',
-			]
-		}
+		sidebar: sidebar 
 	}
 }
