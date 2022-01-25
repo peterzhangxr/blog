@@ -26,7 +26,7 @@ module.exports = {
 		repo: 'peterzhangxr/blog',
 		nav: [
 			{ text: '首页', link: '/'},
-			{ text: 'JS基础', link: '/js/'},
+			{ text: 'JavaSript', link: '/js/'},
 			{ text: 'HTML', link: '/html/'},
 			{ text: 'CSS', link: '/css/'},
 			{ text: 'Vue', link: '/vuejs/'},
